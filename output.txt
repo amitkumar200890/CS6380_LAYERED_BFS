@@ -1,0 +1,43 @@
+No of processes    : 5
+Layered BFS root is: 3
+
+Network topology is as below:
+Process Id : Neighbor List
+    1      : [1, 2, 3]
+    2      : [1, 2, 3]
+    3      : [1, 2, 3, 4, 5]
+    4      : [3, 4, 5]
+    5      : [3, 4, 5]
+
+Starting threads:
+SEND: [Type:         SEARCH] [From: 3 (1)]-> To: 1,  Message: 741454365644800, Network delay time: 7
+SEND: [Type:         SEARCH] [From: 3 (1)]-> To: 2,  Message: 741454365644800, Network delay time: 12
+SEND: [Type:   POSITIVE_ACK] [From: 1 (1)]-> To: 3,  Message: 741461493011100, Network delay time: 1
+SEND: [Type:   POSITIVE_ACK] [From: 2 (1)]-> To: 3,  Message: 741473526819600, Network delay time: 7
+SEND: [Type:         SEARCH] [From: 3 (1)]-> To: 4,  Message: 741454365644800, Network delay time: 7
+SEND: [Type:         SEARCH] [From: 3 (1)]-> To: 5,  Message: 741454365644800, Network delay time: 7
+SEND: [Type:   POSITIVE_ACK] [From: 4 (1)]-> To: 3,  Message: 741480556763300, Network delay time: 1
+SEND: [Type:   POSITIVE_ACK] [From: 5 (1)]-> To: 3,  Message: 741487587300200, Network delay time: 2
+SEND: [Type:      NEW_PHASE] [From: 3 (2)]-> To: 1,  Message: 741489635002400, Network delay time: 9
+SEND: [Type:      NEW_PHASE] [From: 3 (2)]-> To: 2,  Message: 741489635002400, Network delay time: 9
+SEND: [Type:         SEARCH] [From: 1 (2)]-> To: 2,  Message: 741498661489100, Network delay time: 2
+SEND: [Type:   NEGATIVE_ACK] [From: 2 (2)]-> To: 1,  Message: 741500678453600, Network delay time: 5
+SEND: [Type:  CONVERGE_CAST] [From: 1 (2)]-> To: 3,  Message: 741505703036000, Network delay time: 12
+SEND: [Type:         SEARCH] [From: 2 (2)]-> To: 1,  Message: 741507664672600, Network delay time: 9
+SEND: [Type:      NEW_PHASE] [From: 3 (2)]-> To: 4,  Message: 741489635002400, Network delay time: 2
+SEND: [Type:         SEARCH] [From: 4 (2)]-> To: 5,  Message: 741509665460000, Network delay time: 10
+SEND: [Type:      NEW_PHASE] [From: 3 (2)]-> To: 5,  Message: 741489635002400, Network delay time: 12
+SEND: [Type:   NEGATIVE_ACK] [From: 1 (2)]-> To: 2,  Message: 741517719546600, Network delay time: 3
+SEND: [Type:   NEGATIVE_ACK] [From: 5 (2)]-> To: 4,  Message: 741519680063600, Network delay time: 7
+SEND: [Type:  CONVERGE_CAST] [From: 2 (2)]-> To: 3,  Message: 741520737703200, Network delay time: 7
+SEND: [Type:         SEARCH] [From: 5 (2)]-> To: 4,  Message: 741526711962800, Network delay time: 11
+SEND: [Type:  CONVERGE_CAST] [From: 4 (2)]-> To: 3,  Message: 741526712055600, Network delay time: 12
+SEND: [Type:   NEGATIVE_ACK] [From: 4 (2)]-> To: 5,  Message: 741538739103300, Network delay time: 9
+SEND: [Type:  CONVERGE_CAST] [From: 5 (2)]-> To: 3,  Message: 741547782293700, Network delay time: 9
+
+Number of messages generated to complete the process: 24
+Layerd BFS node summary
+Phase No: 0, Nodes added to BFS tree are: [3]
+Phase No: 1, Nodes added to BFS tree are: [1, 2, 4, 5]
+
+All task completed. Now Terminating the process with status code: 200
